@@ -35,7 +35,7 @@ function getFromClient(request,response){
     }
 }
 
-let data={msg: 'no message...'};
+let data={msg: 'no message....'};
 function response_index(request,response){
     if(request.method==='POST'){
         let body='';
