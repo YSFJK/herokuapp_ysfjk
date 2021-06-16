@@ -8,10 +8,7 @@ const index_page=fs.readFileSync('./index.ejs','utf8');
 const other_page=fs.readFileSync('./other.ejs','utf8');
 const style_css=fs.readFileSync('./style.css','utf8');
 
-const server=http.createServer(getFromClient);
-
-
-listen(process.env.PORT, process.env.IP);
+http.createServer(getFromClient).listen(process.env.PORT, process.env.IP);
 console.log('SERVER OPEN');
 
 function getFromClient(request,response){
