@@ -12,9 +12,9 @@ const filename='mydata.txt';
 let message_data;
 readFromFile(filename);
 
-let server=http.createServer(getFromClient).listen(process.env.PORT, process.env.IP);
+let server=http.createServer(getFromClient).listen(3000);
+//.listen(process.env.PORT, process.env.IP);
 
-console.log("Server Start");
 
 function getFromClient(request,response){
 
@@ -80,7 +80,6 @@ function readFromFile(fname){
 function addToData(id,msg,fname,request){
     let obj={'id':id,'msg':msg};
     let obj_str=JSON.stringify(obj);
-    console.log('add data:'+obj_str);
     message_data.unshift(obj_str);
     if(message_data.length>max_num){
         message_data.pop();
