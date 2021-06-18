@@ -12,8 +12,7 @@ const filename='mydata.txt';
 let message_data;
 readFromFile(filename);
 
-let server=http.createServer(getFromClient).listen(3000);
-//.listen(process.env.PORT, process.env.IP);
+let server=http.createServer(getFromClient).listen(process.env.PORT, process.env.IP);
 
 
 function getFromClient(request,response){
